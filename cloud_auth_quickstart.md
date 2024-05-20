@@ -1,6 +1,6 @@
-# Install and Auth Quickstart
+# Install and authentication Quickstart
 
-If you are a python beginner, please head to our [getting started guide for python beginners guide](getting_started_for_python_beginners.md) where we walk through creating a python virtual environment before installing prefect.
+Please see the [this guide](https://gist.github.com/discdiver/0bb3bf96f02c182f96d45278f9564551) if you need assistance creating a Python virtual environment.
 
 ## 1. [Log into Cloud from your browser](https://app.prefect.cloud/)
 
@@ -10,7 +10,7 @@ Much of Prefect's functionality is backed by an API. Sign up for a forever free 
 
 <img src="images/sso_login_button.png" width="300"/>
 
-## 2. Ensure you have prefect installed
+## 2. Ensure you have Prefect installed
 
 Now that you've logged into the cloud UI, we need to set up your local dev environment so that you can author flows.
 
