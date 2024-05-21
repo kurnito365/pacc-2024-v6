@@ -1,6 +1,6 @@
 # Prefect Associate Certification Course 2024
 
-![PACC logo](prefect.png)
+![PACC logo](./images/prefect.png)
 
 Find code from slides that can be used as a starting point for labs in each of the module folders.
 

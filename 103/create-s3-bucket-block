@@ -22,5 +22,4 @@ def create_s3_bucket_block():
 
 if __name__ == "__main__":
     create_aws_creds_block()
-    sleep(5)  # ensure server has time to create credentials block before loading
     create_s3_bucket_block()
