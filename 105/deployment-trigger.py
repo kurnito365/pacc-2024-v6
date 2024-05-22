@@ -10,9 +10,7 @@ def downstream_flow(ticker: str = "AAPL") -> str:
 downstream_deployment_trigger = DeploymentEventTrigger(
     name="Upstream Flow - Pipeline",
     enabled=True,
-    match_related={
-        "prefect.resource.id": "prefect.flow.5c933ae4-dd43-4705-90eb-cfdeb4c028fb"
-    },
+    match_related={"prefect.resource.id": "prefect.flow.*"},
     expect={"prefect.flow-run.Completed"},
 )
 
