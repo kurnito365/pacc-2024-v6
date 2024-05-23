@@ -7,7 +7,6 @@
 - Event-driven workflows:
   - Data lands in S3 - run a deployment with an automation
   - Webhook is hit: data from it flows into a deployment as a parameter
-- State change hooks
 
 ## Lab
 
