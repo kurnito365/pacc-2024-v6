@@ -1,20 +1,14 @@
-# 106 - Event-driven orchestration: run workflows in response to events
+# 107 - Interactive workflows with HITL, manage incidents, speed up workflows
 
 ## Agenda
 
-- Composite triggers
-- Metric triggers
-- Event-driven workflows:
-  - Data lands in S3 - run a deployment with an automation
-  - Webhook is hit: data from it flows into a deployment as a parameter
+- Interactive workflows: pause workflows for human input
+- Manage workspace disruptions with incidents
+- Gain easy async with TaskRunners
 
 ## Lab
 
-- Create an automation that runs a deployment in response to a trigger
-- Stretch 1: Pass information from the event into the deployment
-- Stretch 2: Use a composite trigger in an automation
-- Stretch 3: Use a metric trigger in an automation
-
-## Example
-
-[Data Lake Workflow Automation](https://github.com/PrefectHQ/prefect-demos/tree/main/flows/aws/datalake)
+- Create an interactive workflow that pauses a flow run for input from a user
+- Create an incident
+- Stretch 1: Use the ConcurrentTaskRunner to run tasks concurrently
+- Stretch 2: Use the DaskTaskRunner to run tasks in parallel
