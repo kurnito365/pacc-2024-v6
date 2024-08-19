@@ -11,7 +11,7 @@ if __name__ == "__main__":
         source="https://github.com/PrefectHQ/pacc-2024-v4.git",
         entrypoint="104/basic_deployment.py:my_flow",
     ).deploy(
-        name="pacc-deployment-process-1",
+        name="pacc-deployment-process-3",
         work_pool_name="pacc-process-pool",
         tags=["pacc", "hello"],
     )
