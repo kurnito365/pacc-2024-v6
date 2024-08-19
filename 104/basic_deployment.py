@@ -7,11 +7,11 @@ def my_flow(name: str = "World"):
 
 
 if __name__ == "__main__":
-    my_flow.deploy(
-        name="taylor-pacc-deployment",
-        work_pool_name="taylor-pacc-work-pool",
-        image="docker.io/taycurran/pacc:quickstart",
-        push=False,
-        tags=["pacc", "taylor"],
-        interval=3000,
+    my_flow.from_source(
+        source="https://github.com/PrefectHQ/pacc-2024-v4.git",
+        entrypoint="104/basic_deployment.py:my_flow",
+    ).deploy(
+        name="pacc-deployment-process-1",
+        work_pool_name="pacc-process-pool",
+        tags=["pacc", "hello"],
     )
