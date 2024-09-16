@@ -15,6 +15,6 @@ def fast_flow():
 
 
 if __name__ == "__main__":
-    slow_deploy = slow_flow.to_deployment(name="sleeper-scheduling", interval="200")
+    slow_deploy = slow_flow.to_deployment(name="sleeper-scheduling", interval=20)
     fast_deploy = fast_flow.to_deployment(name="fast-scheduling", cron="* * * * *")
     serve(slow_deploy, fast_deploy)
