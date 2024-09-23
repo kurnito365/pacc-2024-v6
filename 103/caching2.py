@@ -5,7 +5,7 @@ from prefect.cache_policies import INPUTS
 
 
 @task(cache_policy=INPUTS, cache_expiration=timedelta(minutes=1))
-def hello_task(name_input):
+def hello_task(name_input: str):
     print(f"Hello {name_input}")
 
 
