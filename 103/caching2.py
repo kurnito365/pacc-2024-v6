@@ -1,15 +1,22 @@
-from prefect import flow, task
-from prefect.tasks import task_input_hash
 from datetime import timedelta
+from time import sleep
+from prefect import flow, task
+from prefect.cache_policies import INPUTS
 
-@task(cache_key_fn=task_input_hash, cache_expiration=timedelta(minutes=1))
+
+@task(cache_policy=INPUTS, cache_expiration=timedelta(minutes=1))
 def hello_task(name_input):
-    print(f"Hello {name_input}!")
+    print(f"Hello {name_input}")
 
-@flow
-def hello_flow(name_input):
+
+@flow(log_prints=True)
+def hello_flow(name_input: str):
     hello_task(name_input)
 
 
 if __name__ == "__main__":
-    hello_flow("Marvin")
+    hello_flow(name_input="world")
+    sleep(100)
+    hello_flow(name_input="world")
+
+    # does not rerun, but shouldn't it?
