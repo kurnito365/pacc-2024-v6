@@ -15,7 +15,7 @@ def create_aws_creds_block():
 def create_s3_bucket_block():
     aws_creds = AwsCredentials.load("my-aws-creds-block")
     my_s3_bucket_obj = S3Bucket(
-        bucket_name="my-first-bucket-abc", credentials=aws_creds
+        bucket_name="my-first-bucket-abc-123", credentials=aws_creds
     )
     my_s3_bucket_obj.save(name="s3-bucket-block", overwrite=True)
 

@@ -13,5 +13,4 @@ if __name__ == "__main__":
     ).deploy(
         name="pacc-local-process-deploy-remote-code",
         work_pool_name="pacc-process-pool",
-        tags=["pacc", "hello"],
     )
