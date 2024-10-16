@@ -16,9 +16,16 @@ class ShirtOrder(RunInput):
         return value
 
 
-@flow
+@flow(log_prints=True)
 def get_shirt_order():
-    shirt_order = pause_flow_run(wait_for_input=ShirtOrder)
+    shirt_order = None
+
+    while shirt_order is None:
+        try:
+            shirt_order = pause_flow_run(wait_for_input=ShirtOrder)
+            print(f"Shirt order: {shirt_order}")
+        except pydantic.ValidationError:
+            print("Invalid shirt order. Please try again.")
 
 
 if __name__ == "__main__":
