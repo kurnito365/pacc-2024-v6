@@ -6,6 +6,6 @@ if __name__ == "__main__":
         entrypoint="104/hello-pandas.py:my_table_flow",
     ).deploy(
         name="test-imports",
-        work_pool_name="prefect-managed",
+        work_pool_name="managed1",
         job_variables=dict(env=dict(EXTRA_PIP_PACKAGES="pandas")),
     )
