@@ -11,6 +11,6 @@ if __name__ == "__main__":
         source="https://github.com/PrefectHQ/pacc-2024-v6.git",  # code stored in GitHub
         entrypoint="104/local_process_deploy_remote_code.py:my_flow",
     ).deploy(
-        name="pacc-local-process-deploy-remote-code",
+        name="pacc-local-process-deploy-remote-code1",
         work_pool_name="pacc-process-pool",
     )
