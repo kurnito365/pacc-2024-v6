@@ -11,7 +11,7 @@ def my_flow(name: str = "World"):
 if __name__ == "__main__":
     my_flow.from_source(
         source=str(Path(__file__).parent),  # code stored in local directory
-        entrypoint="local_process_deploy_local_code.py:my_flow",
+        entrypoint="local-process-deploy-local-code.py:my_flow",
     ).deploy(
         name="pacc-local-process-deploy-local-code",
         work_pool_name="pacc-process-pool",
