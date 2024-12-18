@@ -7,5 +7,5 @@ if __name__ == "__main__":
         entrypoint="102/weather2-tasks.py:pipeline",
     ).deploy(
         name="my-first-managed-deployment",
-        work_pool_name="managed1",
+        work_pool_name="Personal Workpool",
     )

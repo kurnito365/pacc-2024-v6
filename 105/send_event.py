@@ -1,7 +1,7 @@
 from prefect.events import emit_event
 
 
-def emit_name_event(name: str = "kiki"):
+def emit_name_event(name: str = "Stitch"):
     """Emit a basic Prefect event with a dynamically populated name"""
     print(f"Hi {name}!")
     emit_event(
